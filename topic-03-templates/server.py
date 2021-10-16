@@ -9,12 +9,12 @@ def get_index():
 @route("/hello")
 @route("/hello/<name>")
 def get_hello(name="world"):
-    return template("hello", name="Bob", extra=None)
+    return template('hello', name=name, extra=None)
 
 @route("/greet")
 @route("/greet/<name>")
-def get_greet(name="world"):
-    return template("hello", name="Bob", extra="Happy Birthday!")
+def get_greet(name="Bob"):
+    return template("hello", name=name, extra="Happy Birthday!")
 
 @route("/greeting/<names>")
 def get_greeting(names):
