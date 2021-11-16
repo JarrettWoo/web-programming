@@ -12,7 +12,7 @@ def get_index():
 @get("/hello")
 @get("/hello/<name>")
 def get_hello(name="world"):
-    return template('hello', name="Bob", extra=None)
+    return template('hello', name=name, extra=None)
 
 @get("/greet")
 @get("/greet/<name>")
